@@ -113,7 +113,7 @@ function backwardFn(){
     currentPlayTime = Math.round(video.currentTime)-5
     video.currentTime = currentPlayTime
     slider.value = currentPlayTime
-    showToast("forward 5sec")
+    showToast("backward 5sec")
 }
 
 forwardBtn.addEventListener("click",forwardFn)
