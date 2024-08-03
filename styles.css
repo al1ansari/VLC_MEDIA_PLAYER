@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body{
+    font-family: "Roboto",sans-serif;
+    
+}
+/******************************* Header******************************************* */
+header{
+    height: 5rem;
+    background-color: rgb(238, 238, 238);
+}
+.title-bar{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.title-img {
+    height: 60%;
+    margin-left: 1rem;
+}
+.title{
+    font-size: 1rem;
+}
+.menu-bar{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+.menu{
+    position: relative;   
+}
+.menu:hover{
+    border: 1px solid rgb(7, 93, 133);
+    background-color: rgb(221, 244, 250);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.menu-item{
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    top:5px;
+    width: 9rem;
+    display: none;
+
+}
+.menu:hover .menu-item{
+    display: block;
+}
+li{
+    padding: 0.25rem;
+}
+li:hover {
+    background-color: rgb(172, 172, 172)
+}
+.videoInput{
+    display: none;
+}
+
+/* ***************************Main************************************ */
+main{
+    background-color: black;
+    height: calc(100vh - 10rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.video{
+    height: 100%;
+}
+.toast {
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    top: 99px;
+    right: 47px;
+    display: none;
+}
+
+/**************************************************Footer************************************************ */
+footer{
+    height: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    
+}
+
+.time-container{
+    display: flex;
+    gap: 0.5rem;
+    /* outline: 1px solid black;    */
+}
+.time-container>*{
+    text-align: center;
+}
+.current-time, .total-time{
+    width: 5%;
+    min-width: 50px;
+}
+.time-slider{
+    width: 93%;
+} 
+.slider{
+    width: 100%;
+    opacity: 0.7;
+} 
+.footer-btns{
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+.rest-btns{
+    display: flex;
+    gap: 0.3rem;
+    align-items: flex-end;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(221, 218, 218);
+    border: 1px solid rgb(126, 124, 124);
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+}
+.btn:hover {
+    border: 1px solid rgb(7, 93, 133);
+    background-color: rgb(221, 244, 250);
+}
+i{
+    color: rgba(82, 82, 82, 0.843);
+    font-size: 14px;
+}
+
+.play-pause-container{
+    height: 25px;
+    width: 25px;
+    padding: 7px;
+}
+/* time-slider width will be 75% from 0-1000px of windows width after that it will change to 93% */
+@media (max-width: 1000px) {
+    .time-slider {
+        width: 75%;
+    }
+
+    .time-container {
+        justify-content: space-evenly;
+    }
+
+
+}

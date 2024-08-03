@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="VLC.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <header>
+        <div class="title-bar">
+            <img src="VLC.png" alt="VLC Logo" class="title-img">
+            <h1 class="title">VLC Media Player</h1>
+        </div>
+        <div class="menu-bar">
+            <div class="menu">
+                <div class="menu-btn" id="videoBtn">Open</div>
+                <input type="file" class="videoInput" id="videoInput">
+            </div>
+            <div class="menu">
+                <div class="menu-btn">Playback</div>
+                <ul class="menu-item">
+                    <li id="speedUp">Speed Up</li>
+                    <li id="speedDown">Speed down</li>
+                </ul>
+            </div>
+            <div class="menu">
+                <div class="menu-btn">Audio</div>
+                <ul class="menu-item">
+                    <li id="volumeUp">Volume Up</li>
+                    <li id="volumeDown">Volume down</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main" ></main>
+    <div class="toast"></div>
+    <footer>
+          <div class="time-container">
+            <div class="current-time" id="currentTime">--/--/--</div>
+            <div class="time-slider">
+                <input type="range" min="0" value="0" class="slider" id="slider">
+            </div>
+            <div class="total-time" id="totalTime">--/--/--</div>
+          </div>
+          <div class="footer-btns">
+            <div class="play-pause-container btn" id="playPause"></div>
+            <div class="rest-btns">
+                <div class="backward-btn btn" id="backwardBtn">
+                    <i class="fas fa-backward" ></i>
+                </div>
+                <div class="stop-btn btn" id="stopBtn">
+                    <i class="fas fa-stop"></i>
+                </div>
+                <div class="forward-btn btn" id="forwardBtn">
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="expand-btn btn" id="fullScreenBtn">
+                    <i class="fas fa-expand"></i>
+                </div>
+            </div>
+          </div> 
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
